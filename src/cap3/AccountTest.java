@@ -5,20 +5,36 @@ import java.util.Scanner;
 public class AccountTest {
 
     public static void main(String[] args) {
+
+        Account account1 = new Account("Jane Green", 50.00);
+        Account account2 = new Account("John Blue", -7.53);
+
+        displayAccount(account1);
+        displayAccount(account2);
+
         Scanner sc = new Scanner(System.in);
 
-        Account myAccount = new Account();
-        System.out.printf("Initial name is %s%n%n", myAccount.getName());
+        System.out.print("Enter deposit amount for account1: ");
+        double depositAmount = sc.nextDouble();
+        System.out.printf("%nadding %.2f to account1 balance%n%n", depositAmount);
+        account1.deposit(depositAmount);
 
-        System.out.println("Please enter the name:");
-        String theName = sc.nextLine();
-        myAccount.setName(theName);
+        displayAccount(account1);
+        displayAccount(account2);
 
-        System.out.println();
+        System.out.print("Enter deposit amount for account2: ");
+        depositAmount = sc.nextDouble();
+        System.out.printf("%nadding %.2f to account2 balance%n%n", depositAmount);
+        account2.deposit(depositAmount);
 
-        System.out.printf("Name in object myAccount is: %s%n%n", myAccount.getName());
+        displayAccount(account1);
+        displayAccount(account2);
 
         sc.close();
+    }
+
+    public static void displayAccount( Account accountToDisplay ) {
+        System.out.printf("%s balance: $%.2f %n", accountToDisplay.getName(), accountToDisplay.getBalance());
     }
 
 }
