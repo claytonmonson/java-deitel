@@ -1,6 +1,6 @@
 package cap10;
 
-public abstract class Employee {
+public abstract class Employee implements Payable{
 
     private final String firstName;
     private final String lastName;
@@ -31,6 +31,6 @@ public abstract class Employee {
                 getFirstName(), getLastName(), getSocialSecurityNumber());
     }
 
-    public abstract double earnings();
+  //  public abstract double earnings();
 
 }

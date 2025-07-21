@@ -1,7 +1,5 @@
 package cap10;
 
-import java.math.BigDecimal;
-
 public class SalariedEmployee extends Employee {
 
     private double weeklySalary;
@@ -26,7 +24,7 @@ public class SalariedEmployee extends Employee {
     }
 
     @Override
-    public double earnings() {
+    public double getPaymentAmount() {
         return getWeeklySalary();
     }
 

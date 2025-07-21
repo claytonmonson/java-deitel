@@ -21,13 +21,13 @@ public class PayrollSystemTest {
         System.out.println("Employees processed individually");
 
         System.out.printf("%n%s%n%s: $%,.2f%n%n",
-                salariedEmployee, "earned", salariedEmployee.earnings());
+                salariedEmployee, "earned", salariedEmployee.getPaymentAmount());
         System.out.printf("%n%s%n%s: $%,.2f%n%n",
-                hourlyEmployee, "earned", hourlyEmployee.earnings());
+                hourlyEmployee, "earned", hourlyEmployee.getPaymentAmount());
         System.out.printf("%n%s%n%s: $%,.2f%n%n",
-                commissionEmployee, "earned", commissionEmployee.earnings());
+                commissionEmployee, "earned", commissionEmployee.getPaymentAmount());
         System.out.printf("%n%s%n%s: $%,.2f%n%n",
-                basePlusComissionEmployee, "earned", basePlusComissionEmployee.earnings());
+                basePlusComissionEmployee, "earned", basePlusComissionEmployee.getPaymentAmount());
 
         // cria um array Employee de quatro elementos
         Employee[] employees = new Employee[4];
@@ -52,7 +52,7 @@ public class PayrollSystemTest {
                         employee.getBaseSalary());
             }
 
-            System.out.printf("earned $%,.2f%n%n", currentEmployee.earnings());
+            System.out.printf("earned $%,.2f%n%n", currentEmployee.getPaymentAmount());
         } // for final
 
         for (int j = 0; j < employees.length; j++) {
