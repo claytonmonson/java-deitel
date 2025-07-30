@@ -1,14 +1,11 @@
 package cap11;
 
-import java.util.Queue;
-
 public class UsingChainedExceptions {
     public static void main(String[] args) {
         try {
             method1();
         } catch (Exception exception) {
             exception.printStackTrace();
-            Queue
         }
     }
 
